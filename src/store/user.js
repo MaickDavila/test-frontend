@@ -31,6 +31,7 @@ export const useUserStore = defineStore("user", {
             if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
                 age--;
             }
+            age = age || "0"
             return `${age} años`;
         },
 
